@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍁 추석 가정 예배 안내</title>
+
+    <style>
+        /* (스타일 코드는 이전 답변과 동일합니다) */
+        body { font-family: 'Malgun Gothic', 'Dotum', sans-serif; text-align: center; padding: 20px; background-color: #f7f7f7; }
+        h1 { color: #5d4037; margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; display: inline-block; }
+        .tab-buttons { display: flex; justify-content: center; margin-bottom: 20px; gap: 5px; flex-wrap: wrap; }
+        button { padding: 12px 18px; border: 2px solid #a1887f; background-color: white; color: #5d4037; cursor: pointer; font-size: 0.95em; transition: all 0.3s ease; border-radius: 8px; flex-grow: 1; max-width: 150px; }
+        button:hover { background-color: #ede7f6; }
+        .active { background-color: #5d4037 !important; color: white !important; border-color: #5d4037 !important; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .content { border: 1px solid #e0e0e0; background-color: white; padding: 30px; margin: 0 auto; max-width: 800px; min-height: 250px; border-radius: 10px; text-align: left; line-height: 1.8; }
+        .content h2 { color: #6a1b9a; border-bottom: 1px dashed #e0e0e0; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px; }
+        .info-box { background-color: #fffde7; border: 1px solid #ffeb3b; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .info-box strong { color: #f57f17; font-size: 1.1em; }
+        .hymn-section { margin-bottom: 30px; padding: 15px; border-left: 5px solid #a1887f; background-color: #fcfcfc; }
+        .hymn-section h3 { color: #5d4037; margin-top: 0; }
+        .hymn-section img { display: block; max-width: 100%; height: auto; margin: 15px auto; border: 1px solid #ccc; border-radius: 5px; }
+    </style>
+
+    <script>
+        function showContent(sectionName, clickedButton) {
+            const contentArea = document.getElementById('display-area');
+
+            // 1. 모든 버튼에서 'active' 클래스 제거
+            document.querySelectorAll('button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // 2. 클릭된 버튼에 'active' 클래스 추가
+            if (clickedButton) {
+                 clickedButton.classList.add('active');
+            }
+
+
+            // 3. 내용 변경
+            if (sectionName === 'info') {
+                contentArea.innerHTML = `
+                    <h2>📍 시간 및 장소 안내</h2>
+                    <div class="info-box">
+                        <p><strong>🏠 장소:</strong> 저희 집 (OOOO아파트 101동 101호)</p>
+                        <p><strong>⏰ 도착 시간:</strong> 아침 9시 30분까지 도착 부탁드립니다.</p>
+                        <p><strong>🙏 예배 시작:</strong> 오전 10시 00분에 시작합니다.</p>
+                        <p style="margin-top: 10px; color: #757575;">(늦지 않도록 시간을 지켜주시면 감사하겠습니다.)</p>
+                    </div>
+                `;
+            } else if (sectionName === 'order') {
+                contentArea.innerHTML = `
+                    <h2>🙏 예배 순서</h2>
+                    <p>
+                        1. 묵상기도<br>
+                        2. 찬송 (찬송 301장, **지금까지 지내 온 것**)<br>
+                        3. 기도 (대표자)<br>
+                        4. 말씀 봉독 (시편 136편 1~5절)<br>
+                        5. 말씀 선포 (제목: 감사 또 감사)<br>
+                        6. 설교 후 기도<br>
+                        7. 찬송 (**사철에 봄바람**)<br>
+                        8. 합심 기도<br>
+                        9. 주기도문<br>
+                        10. 나눔 및 축복
+                    </p>
+                `;
+            } else if (sectionName === 'hymns') {
+                 // **찬송가 이미지 삽입 부분 (링크 변경됨)**
+                contentArea.innerHTML = `
+                    <h2>🎶 찬송가 악보</h2>
+                    
+                    <div class="hymn-section">
+                        <h3>1. 찬송 301장: 지금까지 지내 온 것</h3>
+                        <img src="https://postfiles.pstatic.net/MjAyMDA4MThfMzcg/MDAxNTk3NzU5MjU1MzM4.3HFtyupMOamoWZNzsr9VO8jRg7md2hWslE1DLKjQQegg.Qb-7f6bWYWZBGmy9cgQ-bT0gLhvTx4hcJ0jECz5K8vAg.JPEG.kyoung1958/301%EC%9E%A5_%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80_%EC%A7%80%EB%82%B4%EC%98%A8_%EA%B2%83.jpg?type=w773" alt="찬송가 301장 악보">
+                    </div>
+
+                    <div class="hymn-section">
+                        <h3>2. 찬송: 사철에 봄바람</h3>
+                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="사철에 봄바람 악보">
+                    </div>
+                `;
+            } else if (sectionName === 'readings') {
+                contentArea.innerHTML = `
+                    <h2>📖 말씀</h2>
+                    <p><strong>시편 136편 1~5절 (개역개정)</strong></p>
+                    <p>
+                        1절 여호와께 감사하라 그는 선하시며 **그 인자하심이 영원함이로다**.<br>
+                        2절 신들 중에 뛰어난 하나님께 감사하라 **그 인자하심이 영원함이로다**.<br>
+                        3절 주들 중에 뛰어난 주께 감사하라 **그 인자하심이 영원함이로다**.<br>
+                        4절 홀로 큰 기이한 일들을 행하시는 이에게 감사하라 **그 인자하심이 영원함이로다**.<br>
+                        5절 지혜로 하늘을 지으신 이에게 감사하라 **그 인자하심이 영원함이로다**."
+                    </p>
+                `;
+            } else if (sectionName === 'thanks') {
+                contentArea.innerHTML = `
+                    <h2>💡 감사 나누기 및 덕담</h2>
+                    <p>
+                        <strong>✅ 나눔 및 축복 순서입니다.</strong><br>
+                        조상들의 신앙과 은혜를 기억하고, 올 한 해 감사했던 일을 가족들과 함께 나누어 봅시다.
+                    </p>
+                    <ul>
+                        <li>조상 이야기: 어른들이 먼저 조상들의 신앙과 가정의 역사를 들려주세요.</li>
+                        <li>감사 나누기: 가족 각자가 감사했던 일들을 간단히 이야기합니다.</li>
+                        <li>덕담 및 축복: 서로를 축복하고 격려하는 덕담을 나누며 마무리합니다.</li>
+                    </ul>
+                `;
+            }
+        }
+
+        // 페이지 로드 시 기본 콘텐츠 설정: '안내' 탭을 첫 화면으로 설정
+        window.onload = function() {
+            const initialButton = document.getElementById('info-btn');
+            showContent('info', initialButton);
+        };
+    </script>
+</head>
+
+<body>
+    <h1>가족과 함께 드리는 추석 가정예배 안내 🌕</h1>
+
+    <div class="tab-buttons">
+        <button id="info-btn" onclick="showContent('info', this)">
+            <strong>안내 (시간/장소)</strong>
+        </button>
+        <button id="order-btn" onclick="showContent('order', this)">
+            <strong>예배 순서</strong>
+        </button>
+        <button id="hymns-btn" onclick="showContent('hymns', this)">
+            <strong>찬송</strong>
+        </button>
+        <button id="readings-btn" onclick="showContent('readings', this)">
+            <strong>말씀</strong>
+        </button>
+        <button id="thanks-btn" onclick="showContent('thanks', this)">
+            <strong>나눔/축복</strong>
+        </button>
+    </div>
+
+    <div id="display-area" class="content">
+        </div>
+</body>
+
+</html>
