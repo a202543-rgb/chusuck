@@ -7,87 +7,20 @@
     <title>🍁 추석 가정 예배 안내</title>
 
     <style>
-        /* --- 전체 레이아웃 및 폰트 설정 --- */
-        body {
-            font-family: 'Malgun Gothic', 'Dotum', sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f7f7f7;
-        }
-
-        h1 {
-            color: #5d4037;
-            margin-bottom: 30px;
-            font-size: 1.8em;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        /* --- 버튼 및 탭 스타일 --- */
-        .tab-buttons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-
-        button {
-            padding: 12px 20px; /* 버튼 패딩 조정 (버튼이 4개가 되므로) */
-            border: 2px solid #a1887f;
-            background-color: white;
-            color: #5d4037;
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-        }
-
-        button:hover {
-            background-color: #ede7f6;
-        }
-
-        .active {
-            background-color: #5d4037 !important;
-            color: white !important;
-            border-color: #5d4037 !important;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* --- 내용 영역 스타일 --- */
-        .content {
-            border: 1px solid #e0e0e0;
-            background-color: white;
-            padding: 30px;
-            margin: 0 auto;
-            max-width: 700px;
-            min-height: 250px;
-            border-radius: 10px;
-            text-align: left;
-            line-height: 1.8;
-        }
-
-        .content h2 {
-            color: #6a1b9a;
-            border-bottom: 1px dashed #e0e0e0;
-            padding-bottom: 10px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        /* --- 추가된 정보 강조 스타일 --- */
-        .info-box {
-            background-color: #fffde7;
-            border: 1px solid #ffeb3b;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-
-        .info-box strong {
-            color: #f57f17; /* 강조 색상 */
-            font-size: 1.1em;
-        }
+        /* (스타일 코드는 이전 답변과 동일합니다) */
+        body { font-family: 'Malgun Gothic', 'Dotum', sans-serif; text-align: center; padding: 20px; background-color: #f7f7f7; }
+        h1 { color: #5d4037; margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; display: inline-block; }
+        .tab-buttons { display: flex; justify-content: center; margin-bottom: 20px; gap: 5px; flex-wrap: wrap; }
+        button { padding: 12px 18px; border: 2px solid #a1887f; background-color: white; color: #5d4037; cursor: pointer; font-size: 0.95em; transition: all 0.3s ease; border-radius: 8px; flex-grow: 1; max-width: 150px; }
+        button:hover { background-color: #ede7f6; }
+        .active { background-color: #5d4037 !important; color: white !important; border-color: #5d4037 !important; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .content { border: 1px solid #e0e0e0; background-color: white; padding: 30px; margin: 0 auto; max-width: 800px; min-height: 250px; border-radius: 10px; text-align: left; line-height: 1.8; }
+        .content h2 { color: #6a1b9a; border-bottom: 1px dashed #e0e0e0; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px; }
+        .info-box { background-color: #fffde7; border: 1px solid #ffeb3b; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .info-box strong { color: #f57f17; font-size: 1.1em; }
+        .hymn-section { margin-bottom: 30px; padding: 15px; border-left: 5px solid #a1887f; background-color: #fcfcfc; }
+        .hymn-section h3 { color: #5d4037; margin-top: 0; }
+        .hymn-section img { display: block; max-width: 100%; height: auto; margin: 15px auto; border: 1px solid #ccc; border-radius: 5px; }
     </style>
 
     <script>
@@ -107,13 +40,12 @@
 
             // 3. 내용 변경
             if (sectionName === 'info') {
-                // 새로 추가된 '안내' 탭 내용
                 contentArea.innerHTML = `
                     <h2>📍 시간 및 장소 안내</h2>
                     <div class="info-box">
-                        <p><strong>🏠 장소:</strong> 인천 SK sky view아파트 126동 1501호 (용정공원로 33번길)</p>
+                        <p><strong>🏠 장소:</strong> 저희 집 (OOOO아파트 101동 101호)</p>
                         <p><strong>⏰ 도착 시간:</strong> 아침 9시 30분까지 도착 부탁드립니다.</p>
-                        <p><strong>🙏 예배 시작:</strong> 오전 10시에 시작합니다.</p>
+                        <p><strong>🙏 예배 시작:</strong> 오전 10시 00분에 시작합니다.</p>
                         <p style="margin-top: 10px; color: #757575;">(늦지 않도록 시간을 지켜주시면 감사하겠습니다.)</p>
                     </div>
                 `;
@@ -122,16 +54,31 @@
                     <h2>🙏 예배 순서</h2>
                     <p>
                         1. 묵상기도<br>
-                        2. 찬송 (찬송 301장, 지금까지 지내 온 것)<br>
+                        2. 찬송 (찬송 301장, **지금까지 지내 온 것**)<br>
                         3. 기도 (대표자)<br>
                         4. 말씀 봉독 (시편 136편 1~5절)<br>
                         5. 말씀 선포 (제목: 감사 또 감사)<br>
                         6. 설교 후 기도<br>
-                        7. 찬송 (사철에 봄바람)<br>
+                        7. 찬송 (**사철에 봄바람**)<br>
                         8. 합심 기도<br>
                         9. 주기도문<br>
                         10. 나눔 및 축복
                     </p>
+                `;
+            } else if (sectionName === 'hymns') {
+                 // **찬송가 이미지 삽입 부분 (링크 변경됨)**
+                contentArea.innerHTML = `
+                    <h2>🎶 찬송가 악보</h2>
+                    
+                    <div class="hymn-section">
+                        <h3>1. 찬송 301장: 지금까지 지내 온 것</h3>
+                        <img src="https://postfiles.pstatic.net/MjAyMDA4MThfMzcg/MDAxNTk3NzU5MjU1MzM4.3HFtyupMOamoWZNzsr9VO8jRg7md2hWslE1DLKjQQegg.Qb-7f6bWYWZBGmy9cgQ-bT0gLhvTx4hcJ0jECz5K8vAg.JPEG.kyoung1958/301%EC%9E%A5_%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80_%EC%A7%80%EB%82%B4%EC%98%A8_%EA%B2%83.jpg?type=w773" alt="찬송가 301장 악보">
+                    </div>
+
+                    <div class="hymn-section">
+                        <h3>2. 찬송: 사철에 봄바람</h3>
+                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="사철에 봄바람 악보">
+                    </div>
                 `;
             } else if (sectionName === 'readings') {
                 contentArea.innerHTML = `
@@ -176,9 +123,11 @@
         <button id="info-btn" onclick="showContent('info', this)">
             <strong>안내 (시간/장소)</strong>
         </button>
-
         <button id="order-btn" onclick="showContent('order', this)">
             <strong>예배 순서</strong>
+        </button>
+        <button id="hymns-btn" onclick="showContent('hymns', this)">
+            <strong>찬송</strong>
         </button>
         <button id="readings-btn" onclick="showContent('readings', this)">
             <strong>말씀</strong>
