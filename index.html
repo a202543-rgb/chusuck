@@ -7,7 +7,7 @@
     <title>🍁 추석 가정 예배 안내</title>
 
     <style>
-        /* --- (스타일 코드는 이전 답변과 동일합니다) --- */
+        /* (스타일 코드는 이전 답변과 동일합니다) */
         body { font-family: 'Malgun Gothic', 'Dotum', sans-serif; text-align: center; padding: 20px; background-color: #f7f7f7; }
         h1 { color: #5d4037; margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; display: inline-block; }
         .tab-buttons { display: flex; justify-content: center; margin-bottom: 20px; gap: 5px; flex-wrap: wrap; }
@@ -43,10 +43,11 @@
                 contentArea.innerHTML = `
                     <h2>📍 시간 및 장소 안내</h2>
                     <div class="info-box">
-                        <p><strong>🏠 장소:</strong> 저희 집 (OOOO아파트 101동 101호)</p>
-                        <p><strong>⏰ 도착 시간:</strong> 아침 9시 30분까지 도착 부탁드립니다.</p>
-                        <p><strong>🙏 예배 시작:</strong> 오전 10시 00분에 시작합니다.</p>
-                        <p style="margin-top: 10px; color: #757575;">(늦지 않도록 시간을 지켜주시면 감사하겠습니다.)</p>
+                        <p><strong>🏠 장소:</strong> 저희 집 (인천 SK sky view 126동 1501호)</p>
+                        <p><strong>⏰ 모이는 날자:</strong> 2025년 10월 6일</p>
+                        <p><strong>⏰ 모이는 시간:</strong> 아침 9시 30분</p>
+                        <p><strong>🙏 예배 시작:</strong> 오전 10시(정각)</p>
+                        <p style="margin-top: 10px; color: #757575;">(시간 엄수)</p>
                     </div>
                 `;
             } else if (sectionName === 'order') {
@@ -59,29 +60,26 @@
                         4. 말씀 봉독 (시편 136편 1~5절)<br>
                         5. 말씀 선포 (제목: 감사 또 감사)<br>
                         6. 설교 후 기도<br>
-                        7. 찬송 (**찬송 559장, 사철에 봄바람**)<br>
+                        7. 찬송 (**사철에 봄바람**)<br>
                         8. 합심 기도<br>
                         9. 주기도문<br>
                         10. 나눔 및 축복
                     </p>
                 `;
             } else if (sectionName === 'hymns') {
-                 // 🎶 사용자 요청에 따라 찬송가 번호와 내용만 보여줍니다.
+                 // **찬송가 이미지 삽입 부분 (링크 변경됨)**
                 contentArea.innerHTML = `
                     <h2>🎶 찬송가 악보</h2>
                     
                     <div class="hymn-section">
                         <h3>1. 찬송 301장: 지금까지 지내 온 것</h3>
-                        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Fblog%2F016E183A5136A59505" alt="찬송가 301장 악보">
+                        <img src="https://postfiles.pstatic.net/MjAyMDA4MThfMzcg/MDAxNTk3NzU5MjU1MzM4.3HFtyupMOamoWZNzsr9VO8jRg7md2hWslE1DLKjQQegg.Qb-7f6bWYWZBGmy9cgQ-bT0gLhvTx4hcJ0jECz5K8vAg.JPEG.kyoung1958/301%EC%9E%A5_%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80_%EC%A7%80%EB%82%B4%EC%98%A8_%EA%B2%83.jpg?type=w773" alt="찬송가 301장 악보">
                     </div>
 
                     <div class="hymn-section">
-                        <h3>2. 찬송 559장: 사철에 봄바람</h3>
-                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="찬송가 559장 사철에 봄바람 악보">
+                        <h3>2. 찬송: 사철에 봄바람</h3>
+                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="사철에 봄바람 악보">
                     </div>
-                    <p style="text-align: center; margin-top: 20px; color: #757575;">
-                        ※ 모바일로 보시는 경우, 악보를 터치하여 확대하거나 화면을 가로로 돌려보시면 더욱 선명하게 볼 수 있습니다.
-                    </p>
                 `;
             } else if (sectionName === 'readings') {
                 contentArea.innerHTML = `
