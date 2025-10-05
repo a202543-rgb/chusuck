@@ -7,7 +7,7 @@
     <title>🍁 추석 가정 예배 안내</title>
 
     <style>
-        /* (스타일 코드는 이전 답변과 동일합니다) */
+        /* --- (스타일 코드는 이전 답변과 동일합니다) --- */
         body { font-family: 'Malgun Gothic', 'Dotum', sans-serif; text-align: center; padding: 20px; background-color: #f7f7f7; }
         h1 { color: #5d4037; margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; display: inline-block; }
         .tab-buttons { display: flex; justify-content: center; margin-bottom: 20px; gap: 5px; flex-wrap: wrap; }
@@ -59,14 +59,14 @@
                         4. 말씀 봉독 (시편 136편 1~5절)<br>
                         5. 말씀 선포 (제목: 감사 또 감사)<br>
                         6. 설교 후 기도<br>
-                        7. 찬송 (찬송 559장:**사철에 봄바람**)<br>
+                        7. 찬송 (**찬송 559장, 사철에 봄바람**)<br>
                         8. 합심 기도<br>
                         9. 주기도문<br>
                         10. 나눔 및 축복
                     </p>
                 `;
             } else if (sectionName === 'hymns') {
-                 // **찬송가 이미지 삽입 부분 (링크 변경됨)**
+                 // 🎶 사용자 요청에 따라 찬송가 번호와 내용만 보여줍니다.
                 contentArea.innerHTML = `
                     <h2>🎶 찬송가 악보</h2>
                     
@@ -76,9 +76,12 @@
                     </div>
 
                     <div class="hymn-section">
-                        <h3>2. 찬송 559장 : 사철에 봄바람</h3>
-                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="사철에 봄바람 악보">
+                        <h3>2. 찬송 559장: 사철에 봄바람</h3>
+                        <img src="https://t1.daumcdn.net/cafeattach/1CljP/fd46347f78f2ba12cff159de76883ad44aadfbf3" alt="찬송가 559장 사철에 봄바람 악보">
                     </div>
+                    <p style="text-align: center; margin-top: 20px; color: #757575;">
+                        ※ 모바일로 보시는 경우, 악보를 터치하여 확대하거나 화면을 가로로 돌려보시면 더욱 선명하게 볼 수 있습니다.
+                    </p>
                 `;
             } else if (sectionName === 'readings') {
                 contentArea.innerHTML = `
@@ -142,6 +145,3 @@
 </body>
 
 </html>
-
-
-
